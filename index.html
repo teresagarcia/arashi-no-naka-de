@@ -7,38 +7,13 @@
   <link rel="stylesheet" href="style.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              primary: '#345364',
-              secondary: '#08315c',
-              back: '#08315c18',
-            },
-          },
-        },
-      },
-    };
-  </script>
+  <script type="text/javascript" src="/scripts/tailwind-config.js"></script>
+  <script type="module" src="/components/header/header-component.js"></script>
+  <script type="module" src="/components/footer/footer-component.js"></script>
 </head>
 <body class="text-gray-800 font-sans">
 
-  <header class="py-6 text-center">
-    <h1 class="title text-7xl md:text-8xl"><a href="/">Arashi no naka de</a></h1>
-    <div class="inset-x-0 flex justify-center mt-6">
-      <nav class="bg-white shadow-md rounded-xl px-8 py-3">
-        <ul class="flex space-x-8 text-gray-800 text-lg font-medium">
-          <li><a href="/" class="hover:text-blue-secondary transition">Inicio</a></li>
-          <li><a href="#" class="hover:text-blue-secondary transition">Listado</a></li>
-          <li><a href="#" class="hover:text-blue-secondary transition">Sobre mí</a></li>
-        </ul>
-      </nav>
-    </div>
-
-  </header>
-
+ <header-component></header-component>
   <main class="max-w-3xl mx-auto pb-6 pt-3">
     <div class="min-h-[200px] max-h-[400px] p-6 bg-white rounded-lg">
       <h3 class="post-title"><a href="5x10/truth.html">[Letra] Arashi - truth</a></h3>
@@ -51,9 +26,7 @@
     </div>
   </main>
 
-  <footer class="text-center text-xs text-gray-600 p-4 mt-8 border-t">
-  Este blog es un proyecto personal sin fines comerciales. Las letras originales pertenecen a sus respectivos titulares de derechos. Las traducciones son realizadas con fines educativos y de difusión cultural.
-</footer>
+  <footer-component></footer-component>
 
 </body>
 </html>

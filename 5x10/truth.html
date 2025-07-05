@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arashi - truth | Arashi no naka de</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
-    <h1><a href="/">Arashi no naka de</a></h1>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="/scripts/tailwind-config.js"></script>
 
-   <h2>Arashi - truth (Letra en español)</h2>
-   <div class="post-body">
-   <div class="intro">Mi canción favorita</div>
-   <div class="content"></div>
-   <div class="info"></div>
-   </div>
+    <script type="module" src="/components/header/header-component.js"></script>
+    <script type="module" src="/components/footer/footer-component.js"></script>
+  </head>
+  <body class="text-gray-800 font-sans">
+    <header-component></header-component>
+    <main class="max-w-3xl mx-auto pb-6 pt-3">
+
+      <h2>Arashi - truth (Letra en español)</h2>
+
+      <div class="post-body">
+      <div class="intro">Mi canción favorita</div>
+      <div class="content"></div>
+      <div class="info"></div>
+      </div>
+    </main>
+    <footer-component></footer-component>
   </body>
 </html>
