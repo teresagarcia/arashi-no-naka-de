@@ -138,6 +138,5 @@ const fullLyrics = `ゆらりゆれる光ひとつ 痛み癒すことなく消�
         Mientras nuestros deseos siguen transparentes<br />`
 
 window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
   setTimeout(() => {document.querySelector('.content').innerHTML = fullLyrics}, 0) 
 });
