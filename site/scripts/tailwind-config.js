@@ -6,6 +6,7 @@
                 primary: '#345364',
                 secondary: '#08315c',
                 back: '#08315c18',
+                link: '#164e88'
               },
             },
           },
