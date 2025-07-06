@@ -10,6 +10,7 @@
 
     <script type="module" src="/components/header/header-component.js"></script>
     <script type="module" src="/components/footer/footer-component.js"></script>
+    <script type="text/javascript" src="/scripts/list.js"></script>
   </head>
   <body class="text-gray-800 font-sans">
     <header-component></header-component>
@@ -20,7 +21,16 @@
         <div class="img-container ">
             <img src="/images/arashi.jpg" alt="Arashi" class="max-w-[80%] mx-auto"> 
         </div>
-        <div id="list-type-btn"></div>
+        <div class="text-center my-6">
+            <div id="list-type-btn" class="inline-flex">
+                <button id="order-album-btn" class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-l-full disabled" disabled>
+                    Por álbum
+                </button>
+                <button id="order-alpha-btn" class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-r-full">
+                    Por orden alfabético
+                </button>
+            </div>
+        </div>
         <div id="by-album-list">
         <div class="mb-4">
             <div class="font-bold">5x20 All the BEST!! 1999-2019</div>
@@ -41,7 +51,7 @@
             </ul>
         </div>
         </div>
-        <div id="alphabetical-list">
+        <div id="alphabetical-list" hidden>
             <div class="font-bold">T</div>
             <ul>
                 <li><a href="/5x10/truth.html" class="text-blue-link">truth</a></li>
