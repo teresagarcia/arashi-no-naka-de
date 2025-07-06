@@ -9,6 +9,9 @@
                 link: '#164e88'
               },
             },
+            fontFamily: {
+              sans: ['Tahoma', 'sans-serif'],
+            },
           },
         },
       };
