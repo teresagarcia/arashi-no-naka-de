@@ -3,13 +3,28 @@ import re
 with open("arashi_entries.json") as json_file:
     json_data = json.load(json_file)
 
-texto = re.sub(r'\n(?=<)', '', json_data[0]['content'])
-texto = re.sub(r'(?<=>)\n', '', texto)
-texto_sin_saltos = texto.replace("\n", " ")
+full_text = json_data[0]['content']
 
-sin_comentarios = re.sub(r'<!--.*?-->', '', texto_sin_saltos, flags=re.DOTALL)
-resultado = re.sub(r'<(?!/div\b)(?!a\b)(?!/a\b)[^>]+>', '', sin_comentarios)
-resultado = resultado.replace('</div>', '<br/>')
-resultado = re.sub(r'\s{2,}', ' ', resultado)
-print(resultado)
+# Remove \n before and after tags
+result = re.sub(r'\n(?=<)', '', full_text)
+result = re.sub(r'(?<=>)\n', '', result)
+
+# Replace \n with whitespace in other cases
+result = result.replace("\n", " ")
+
+# Remove comments
+result = re.sub(r'<!--.*?-->', '', result, flags=re.DOTALL)
+
+# Remove all tags except </div> (used for linebreak), <a> and <b> 
+result = re.sub(r'<(?!/div\b)(?!a\b)(?!/a\b)(?!b\b)(?!/b\b)[^>]+>', '', result)
+
+# Replace </div> with <br/>
+result = result.replace('</div>', '<br/>')
+
+# Remove multiple whitespaces
+result = re.sub(r'\s{2,}', ' ', result)
+
+# Add \n after <br/> (except last line) for readability
+result = re.sub(r'<br\s*/?>(?!\s*$)', '<br/>\n', result)
+print(result)
 
