@@ -28,6 +28,7 @@ result = re.sub(r'\s{2,}', ' ', result)
 result = re.sub(r'<br\s*/?>(?!\s*$)', '<br/>\n', result)
 print(result)
 
+# ----- esto debería ir separado ----
 # Separar letra e info
 lines = result.splitlines()
 
@@ -49,7 +50,6 @@ artist = title_parts[0].strip()
 song = title_parts[1].strip()
 
 print("Artista:", artist, ", song:", song)
-
 
 #Save data in json file
 with open("clean_entries.json", "r", encoding="utf-8") as f:
