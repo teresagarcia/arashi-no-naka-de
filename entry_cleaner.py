@@ -58,6 +58,5 @@ with open("clean_entries.json", "r", encoding="utf-8") as f:
 new_entry = {"artist": artist, "song": song, "lyrics": lyrics, "info": song_info, "blogger_link": json_data[0]['link']}
 clean_entries.append(new_entry)
 
-# 3. Guardar de nuevo
 with open("clean_entries.json", "w", encoding="utf-8") as f:
     json.dump(clean_entries, f, indent=2, ensure_ascii=False)

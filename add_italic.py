@@ -12,3 +12,4 @@ cachitos = lyrics.split('<br/>\n<br/>')
 for i,cachito  in enumerate(cachitos):
     print(i,cachito)
     print("varias líneas", cachito.splitlines().__len__() > 1)
+#si es una línea <i> en esa línea, si dos o más, en la segunda desde el final

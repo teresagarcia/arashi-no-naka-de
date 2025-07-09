@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="/scripts/tailwind-config.js"></script>
+
+    <script type="module" src="/components/header/header-component.js"></script>
+    <script type="module" src="/components/footer/footer-component.js"></script>
+    <script type="module" src="/components/lyrics/lyrics-component.js"></script>
+
+  </head>
+  <body class="text-gray-800 font-sans">
+    <header-component></header-component>
+    <main class="max-w-6xl mx-auto pb-6 pt-3">
+      <lyrics-component></lyrics-component>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>
