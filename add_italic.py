@@ -5,17 +5,17 @@ with open("clean_entries.json") as json_file:
 
 lyrics = json_data[0]['lyrics']
 
-cachitos = lyrics.split('<br/>\n<br/>')
+blocks = lyrics.split('<br/>\n<br/>')
 
-new_cachitos = []
-for i,cachito  in enumerate(cachitos):
-    multiline = cachito.splitlines().__len__() > 1
+rebuilt = []
+for i,block  in enumerate(blocks):
+    multiline = block.splitlines().__len__() > 1
     if multiline :
-        cachitos_a_cachitos = cachito.splitlines()
-        parte1, sep, _ = cachitos_a_cachitos[-2].partition('<br/>')
-        cachitos_a_cachitos[-2] = f"<i>{parte1}</i>{sep}"
-        cachitos_joined = ''.join(cachitos_a_cachitos)
-        new_cachitos.append(cachitos_joined)
+        split_block = block.splitlines()
+        phrase, sep, _ = split_block[-2].partition('<br/>')
+        split_block[-2] = f"<i>{phrase}</i>{sep}"
+        blocks_joined = ''.join(split_block)
+        rebuilt.append(blocks_joined)
 
-final_result = '<br/>\n<br/>'.join(new_cachitos) + '<br/>\n<br/>'
+final_result = '<br/>\n<br/>'.join(rebuilt) + '<br/>\n<br/>'
 print(final_result)
