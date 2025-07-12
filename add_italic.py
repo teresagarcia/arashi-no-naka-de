@@ -40,7 +40,7 @@ def final_transformation():
     arranger = 'BJ Khan'
     album = 'Japonism (2015)'
 
-    info_section = f"<span class='font-bold text-blue-secondary'>Info de la canción:</span><br/>Letra: {lyricist}.<br/>Música: {composer}.<br/>Arreglos: {arranger}.<br/>Álbum: {album}.<br/><br/><span class='font-bold text-blue-secondary'>Créditos:</span><br />Letra en japonés, romaji y traducción al inglés: <a href=\"http://yarukizero.livejournal.com/202210.html\" target=\"_blank\" class='text-blue-link'>Yarukizero</a>.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com/{json_data[0]['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
+    info_section = f"<span class='font-bold text-blue-secondary'>Info de la canción:</span><br/>Letra: {lyricist}.<br/>Música: {composer}.<br/>Arreglos: {arranger}.<br/>Álbum: {album}.<br/><br/><span class='font-bold text-blue-secondary'>Créditos:</span><br />Letra en japonés, romaji y traducción al inglés: <a href=\"http://yarukizero.livejournal.com/202210.html\" target=\"_blank\" class='text-blue-link'>Yarukizero</a>.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com{json_data[0]['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
 
     new_entry = {
         'artist': json_data[0]['artist'],
