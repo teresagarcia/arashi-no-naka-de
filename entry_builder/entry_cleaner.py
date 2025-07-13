@@ -7,14 +7,14 @@ def clean_entry(only_save=False):
         json_data = json.load(json_file)
 
     result = json_data[0]['content']
+
+    # Remove \n before and after tags
+    result = re.sub(r'\n(?=<)', '', result)
+    result = re.sub(r'(?<=>)\n', '', result)
+
+    # Replace \n with whitespace in other cases
+    result = result.replace("\n", " ")
     if not only_save:
-
-        # Remove \n before and after tags
-        result = re.sub(r'\n(?=<)', '', result)
-        result = re.sub(r'(?<=>)\n', '', result)
-
-        # Replace \n with whitespace in other cases
-        result = result.replace("\n", " ")
 
         # Remove comments
         result = re.sub(r'<!--.*?-->', '', result, flags=re.DOTALL)
