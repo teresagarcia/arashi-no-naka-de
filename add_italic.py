@@ -25,13 +25,13 @@ def final_transformation():
     rebuilt = []
     for i,block  in enumerate(blocks):
         multiline = block.splitlines().__len__() > 1
-        if multiline :
-            split_block = block.splitlines()
-            phrase, sep, _ = split_block[-2].partition('<br/>')
-            split_block[-2] = f"<i>{phrase}</i>{sep}"
-            blocks_joined = ''.join(split_block)
-            rebuilt.append(blocks_joined)
-
+        index = -2 if multiline else 0
+        split_block = block.splitlines()
+        phrase, sep, _ = split_block[index].partition('<br/>')
+        split_block[index] = f"<i>{phrase}</i>{sep}"
+        blocks_joined = ''.join(split_block)
+        rebuilt.append(blocks_joined)
+            
     final_result = '<br/>\n<br/>'.join(rebuilt) + '<br/>'
     print(final_result)
 
