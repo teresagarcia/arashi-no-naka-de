@@ -1,62 +1,44 @@
 import json
 import re
-with open("arashi_entries.json") as json_file:
-    json_data = json.load(json_file)
+import sys
 
-full_text = json_data[0]['content']
+def clean_entry(only_save=False):
+    with open("arashi_entries.json") as json_file:
+        json_data = json.load(json_file)
 
-# Remove \n before and after tags
-result = re.sub(r'\n(?=<)', '', full_text)
-result = re.sub(r'(?<=>)\n', '', result)
+    result = json_data[0]['content']
+    if not only_save:
 
-# Replace \n with whitespace in other cases
-result = result.replace("\n", " ")
+        # Remove \n before and after tags
+        result = re.sub(r'\n(?=<)', '', result)
+        result = re.sub(r'(?<=>)\n', '', result)
 
-# Remove comments
-result = re.sub(r'<!--.*?-->', '', result, flags=re.DOTALL)
+        # Replace \n with whitespace in other cases
+        result = result.replace("\n", " ")
 
-# Remove all tags except </div> (used for linebreak), <a> and <b> 
-result = re.sub(r'<(?!/div\b)(?!a\b)(?!/a\b)(?!b\b)(?!/b\b)[^>]+>', '', result)
+        # Remove comments
+        result = re.sub(r'<!--.*?-->', '', result, flags=re.DOTALL)
 
-# Replace </div> with <br/>
-result = result.replace('</div>', '<br/>')
+        # Remove all tags except </div> (used for linebreak), <a> and <b> 
+        result = re.sub(r'<(?!/div\b)(?!a\b)(?!/a\b)(?!b\b)(?!/b\b)[^>]+>', '', result)
 
-# Remove multiple whitespaces
-result = re.sub(r'\s{2,}', ' ', result)
+        # Replace </div> with <br/>
+        result = result.replace('</div>', '<br/>')
 
-# Add \n after <br/> (except last line) for readability
-result = re.sub(r'<br\s*/?>(?!\s*$)', '<br/>\n', result)
-print(result)
+        # Remove multiple whitespaces
+        result = re.sub(r'\s{2,}', ' ', result)
 
-# ----- esto debería ir separado ----
-# Separar letra e info
-lines = result.splitlines()
+    # Add \n after <br/> (except last line) for readability
+    result = re.sub(r'<br\s*/?>(?!\s*$)', '<br/>\n', result)
+    print(result)
+    json_data[0]['content'] = result
 
-for i, line in enumerate(lines):
-    if "Créditos:" in line or "Info de la canción" in line:
-        index = i
-        break
-
-lyrics = "\n".join(lines[:index])     
-song_info = "\n".join(lines[index:])     
-
-print("Sólo letra:\n", lyrics)
-print("Créditos:\n", song_info)
-
-# Separar partes del título
-title = json_data[0]['title'].replace('[Letra]', '')
-title_parts = title.split('-')
-artist = title_parts[0].strip()
-song = title_parts[1].strip()
-
-print("Artista:", artist, ", song:", song)
-
-#Save data in json file
-with open("clean_entries.json", "r", encoding="utf-8") as f:
-    clean_entries = json.load(f)
-
-new_entry = {"artist": artist, "song": song, "lyrics": lyrics, "info": song_info, "blogger_link": json_data[0]['link']}
-clean_entries.append(new_entry)
-
-with open("clean_entries.json", "w", encoding="utf-8") as f:
-    json.dump(clean_entries, f, indent=2, ensure_ascii=False)
+    #guardar en fichero intermedio
+    with open("clean_entry.json", "w", encoding="utf-8") as f:
+        json.dump(json_data[0], f, indent=2, ensure_ascii=False)
+        
+if __name__ == "__main__":
+    only_save = False
+    if len(sys.argv) > 1:
+        only_save = True if sys.argv[1]=='S' else False
+    clean_entry(only_save)

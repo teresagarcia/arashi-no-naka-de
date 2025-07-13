@@ -26,4 +26,4 @@ with open("arashi_entries.json", "w", encoding="utf-8") as f:
 
 for entry in entries:
     print(entry['title'])
-print("total:", entries.__len__())
+print("total:", len(entries))
