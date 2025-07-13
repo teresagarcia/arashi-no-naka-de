@@ -1,7 +1,7 @@
 import json
 
 def add_italic():
-    with open("preformat_entry.json") as json_file:
+    with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
 
     lyrics = json_data['lyrics']
@@ -21,7 +21,7 @@ def add_italic():
     final_result = '<br/>\n<br/>'.join(rebuilt) + '<br/>'
     print(final_result)
     json_data['lyrics'] = final_result
-    with open("preformat_entry.json", "w", encoding="utf-8") as f:
+    with open("data/preformat_entry.json", "w", encoding="utf-8") as f:
         json.dump(json_data, f, indent=2, ensure_ascii=False)
 
     

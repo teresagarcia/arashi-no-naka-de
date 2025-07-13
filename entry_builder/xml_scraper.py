@@ -2,7 +2,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 import json
 
-xml_path = Path("feed.atom")  # Cambia la ruta
+xml_path = Path("data/feed.atom")  
 with xml_path.open(encoding="utf-8") as f:
     xml_string = f.read()
 

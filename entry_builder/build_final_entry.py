@@ -14,7 +14,7 @@ def limpiar_para_url(texto):
     return texto
    
 def final_transformation():   
-    with open("preformat_entry.json") as json_file:
+    with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
     lyricist = 'Paddy'
     composer = 'Peter Nord, Kevin Borg'
@@ -34,7 +34,7 @@ def final_transformation():
     }
 
     entry_filename = limpiar_para_url(json_data['song'])
-    with open(f"site/arashi/{album_folder}/{entry_filename}.json", "w", encoding="utf-8") as f:
+    with open(f"../site/arashi/{album_folder}/{entry_filename}.json", "w", encoding="utf-8") as f:
         json.dump(new_entry, f, ensure_ascii=False, indent=2)
         
 if __name__ == "__main__":

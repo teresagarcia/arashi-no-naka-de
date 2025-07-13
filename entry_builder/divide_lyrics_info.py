@@ -1,7 +1,7 @@
 import json
 
 def divide_lyrics_info():
-    with open("clean_entry.json") as json_file:
+    with open("data/clean_entry.json") as json_file:
         json_data = json.load(json_file)
 
     lines = json_data['content'].splitlines()
@@ -35,7 +35,7 @@ def divide_lyrics_info():
         "blogger_link": json_data['link']
         }
 
-    with open("preformat_entry.json", "w", encoding="utf-8") as f:
+    with open("data/preformat_entry.json", "w", encoding="utf-8") as f:
         json.dump(new_entry, f, indent=2, ensure_ascii=False)
         
 if __name__ == "__main__":

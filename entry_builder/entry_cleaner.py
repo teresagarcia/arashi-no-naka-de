@@ -3,7 +3,7 @@ import re
 import sys
 
 def clean_entry(only_save=False):
-    with open("arashi_entries.json") as json_file:
+    with open("data/arashi_entries.json") as json_file:
         json_data = json.load(json_file)
 
     result = json_data[0]['content']
@@ -34,7 +34,7 @@ def clean_entry(only_save=False):
     json_data[0]['content'] = result
 
     #guardar en fichero intermedio
-    with open("clean_entry.json", "w", encoding="utf-8") as f:
+    with open("data/clean_entry.json", "w", encoding="utf-8") as f:
         json.dump(json_data[0], f, indent=2, ensure_ascii=False)
         
 if __name__ == "__main__":
