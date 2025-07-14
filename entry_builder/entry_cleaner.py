@@ -18,13 +18,16 @@ def clean_entry(only_save=False):
 
         # Remove comments
         result = re.sub(r'<!--.*?-->', '', result, flags=re.DOTALL)
-
+        result = result.replace('&nbsp;', '')
+        result = re.sub(r'<br\s*/?>', '<br/>', result, flags=re.IGNORECASE)
         # Remove all tags except </div> (used for linebreak), <a> and <b> 
-        result = re.sub(r'<(?!/div\b)(?!a\b)(?!/a\b)(?!b\b)(?!/b\b)[^>]+>', '', result)
+        result = re.sub(r'<(?!/div\b)(?!br/?>)(?!a\b)(?!/a\b)(?!b\b)(?!/b\b)[^>]+>', '', result)
 
         # Replace </div> with <br/>
         result = result.replace('</div>', '<br/>')
-
+        result = re.sub(r'^(<br/>\s*)+', '', result)
+        print(result)
+        result = re.sub(r'(<br/>\s*){3,}', '<br/><br/>', result, flags=re.IGNORECASE)
         # Remove multiple whitespaces
         result = re.sub(r'\s{2,}', ' ', result)
 
