@@ -8,6 +8,7 @@ window.addEventListener("load", async () => {
   document.querySelector('h2').textContent = entryTitle;
   document.querySelector('.intro').innerHTML = data.intro;
   document.querySelector('.content').innerHTML = data.content;
-  document.querySelector('.info').innerHTML = data.info;
+  document.querySelector('.info').innerHTML = `<span class='font-bold text-blue-secondary'>Info de la canción:</span><br/>Letra: ${data.lyricist}.<br/>Música: ${data.composer}.<br/>Arreglos: ${data.arranger}.<br/>Álbum: ${data.album}.<br/><br/>`
+  document.querySelector('.credits').innerHTML = data.credits;
   document.title = `${entryTitle} | Arashi no naka de`;
 })
