@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de letras y traducciones | Arashi no naka de</title>
@@ -11,95 +12,130 @@
     <script type="module" src="/components/header/header-component.js"></script>
     <script type="module" src="/components/footer/footer-component.js"></script>
     <script type="text/javascript" src="/scripts/list.js"></script>
-  </head>
-  <body class="text-gray-800 font-sans">
+</head>
+
+<body class="text-gray-800 font-sans">
     <header-component></header-component>
     <main class="max-w-6xl mx-auto pb-6 pt-3">
-      <div class="bg-white p-6 md:p-12 rounded-lg shadow-sm">
-      <h2 class="post-title text-2xl md:text-3xl">Listado de letras y traducciones</h2>
-      <div class="post-body pt-7">
-        <div class="img-container">
-            <img src="/images/arashi.jpg" alt="Arashi" class="md:max-w-[80%] mx-auto"> 
-        </div>
-        <div class="text-center my-6">
-            <div id="list-type-btn" class="inline-flex">
-                <button id="order-album-btn" class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-l-full disabled" disabled>
-                    Por álbum
-                </button>
-                <button id="order-alpha-btn" class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-r-full">
-                    Por orden alfabético
-                </button>
+        <div class="bg-white p-6 md:p-12 rounded-lg shadow-sm">
+            <h2 class="post-title text-2xl md:text-3xl">Listado de letras y traducciones</h2>
+            <div class="post-body pt-7">
+                <div class="img-container">
+                    <img src="/images/arashi.jpg" alt="Arashi" class="md:max-w-[80%] mx-auto">
+                </div>
+                <div class="text-center my-6">
+                    <div id="list-type-btn" class="inline-flex">
+                        <button id="order-album-btn"
+                            class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-l-full disabled"
+                            disabled>
+                            Por álbum
+                        </button>
+                        <button id="order-alpha-btn"
+                            class="bg-blue-back hover:bg-blue-secondary hover:text-white text-black disabled:bg-blue-secondary disabled:bg-blue-secondary disabled:text-white disabled:cursor-default py-2 px-4 rounded-r-full">
+                            Por orden alfabético
+                        </button>
+                    </div>
+                </div>
+                <div id="by-album-list">
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>5x20 All the BEST!!
+                            1999-2019</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
+                                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>untitled</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>Tsunagu</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>Japonism</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=japonism/bokura_ga_tsunaideiku"
+                                        class="text-blue-link">Bokura
+                                        ga tsunaideiku</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>Boku no Miteiru Fuukei
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=boku_no_miteiru_fuukei/mukae_ni_iku_yo"
+                                        class="text-blue-link">Mukae ni iku yo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>5x10 All the BEST!
+                            1999-2009</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>truth/Kaze no mukou e
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="alphabetical-list" hidden>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>B</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=japonism/bokura_ga_tsunaideiku"
+                                        class="text-blue-link">Bokura
+                                        ga tsunaideiku</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>M</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=boku_no_miteiru_fuukei/mukae_ni_iku_yo"
+                                        class="text-blue-link">Mukae ni iku yo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion mb-4">
+                        <div class="accordion-header text-blue-link"><span class="arrow">&#9834;</span>T</div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
+                                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="by-album-list">
-        <div class="mb-4">
-            <div class="font-bold">5x20 All the BEST!! 1999-2019</div>
-            <ul>
-                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
-                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <div class="font-bold">untitled</div>
-            <ul>
-                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
-            </ul>
-        </div>
-            <div class="mb-4">
-            <div class="font-bold">Tsunagu</div>
-            <ul>
-                <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <div class="font-bold">Japonism</div>
-            <ul>
-                <li><a href="/lyrics.html?song=japonism/bokura_ga_tsunaideiku" class="text-blue-link">Bokura ga tsunaideiku</a></li>
-            </ul>
-        </div>
-           <div class="mb-4">
-            <div class="font-bold">Boku no Miteiru Fuukei</div>
-            <ul>
-                <li><a href="/lyrics.html?song=boku_no_miteiru_fuukei/mukae_ni_iku_yo" class="text-blue-link">Mukae ni iku yo</a></li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <div class="font-bold">5x10 All the BEST! 1999-2009</div>
-            <ul>
-                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <div class="font-bold">truth/Kaze no mukou e</div>
-            <ul>
-                <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
-            </ul>
-        </div>
-        </div>
-        <div id="alphabetical-list" hidden>
-             <div class="mb-4">
-                <div class="font-bold">B</div>
-                <ul>
-                    <li><a href="/lyrics.html?song=japonism/bokura_ga_tsunaideiku" class="text-blue-link">Bokura ga tsunaideiku</a></li>
-                </ul>
-            </div>
-             <div class="mb-4">
-                <div class="font-bold">M</div>
-                <ul>
-                    <li><a href="/lyrics.html?song=boku_no_miteiru_fuukei/mukae_ni_iku_yo" class="text-blue-link">Mukae ni iku yo</a></li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-bold">T</div>
-                <ul>
-                    <li><a href="/lyrics.html?song=5x10/truth" class="text-blue-link">truth</a></li>
-                    <li><a href="/lyrics.html?song=untitled/tsunagu" class="text-blue-link">Tsunagu</a></li>
-                </ul>
-            </div>
-        </div>
-      </div>
-      </div>
     </main>
     <footer-component></footer-component>
-  </body>
+</body>
+
 </html>

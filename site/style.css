@@ -1,7 +1,8 @@
-@font-face{
+@font-face {
   font-family: "BaileySignature";
   src: url("./fonts/BaileySignature-WpAMG.ttf") format("truetype");
 }
+
 body {
   background-color: #eaedee;
   color: black;
@@ -10,7 +11,7 @@ body {
 
 .title {
   font-family: 'BaileySignature', sans-serif;
-  color:rgb(52, 83, 130);
+  color: rgb(52, 83, 130);
 }
 
 .post-card {
@@ -22,3 +23,28 @@ body {
   font: bold 24px/1.4 'Garamond', serif;
   color: #08315c
 }
+
+.accordion {
+  width: 250px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+}
+
+.accordion-header .arrow {
+  display: inline-block;
+  margin-right: 5px;
+}
+

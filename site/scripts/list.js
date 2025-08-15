@@ -1,6 +1,20 @@
 window.addEventListener("load", (event) => {
     document.querySelector('#order-album-btn').addEventListener('click', orderByAlbum);
     document.querySelector('#order-alpha-btn').addEventListener('click', orderByAlpha);
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            header.classList.toggle('open');
+            content.classList.toggle('open');
+            if (header.classList.contains('open')) {
+                header.classList.add('font-bold');
+                header.classList.remove('text-blue-link');
+            } else {
+                header.classList.remove('font-bold');
+                header.classList.add('text-blue-link');
+            }
+        });
+    });
 
 });
 
@@ -18,3 +32,4 @@ function orderByAlpha() {
     document.querySelector('#alphabetical-list').hidden = false;
 
 }
+
