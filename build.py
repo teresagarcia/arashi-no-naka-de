@@ -76,7 +76,7 @@ if new_index_name:
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="0; url={new_index_name}">
-<title>Redirigiendo...</title>
+<title>Arashi no naka de</title>
 </head>
 <body>
 Redirigiendo a la versión más reciente...
