@@ -5,7 +5,7 @@ import re
 
 SRC_DIR = "site"
 DIST_DIR = "dist"
-VERSION = datetime.now().strftime("%Y%m%d-%H%M")
+VERSION = datetime.now().strftime("%Y%m%d%H%M")
 
 # limpiar dist si existe
 if os.path.exists(DIST_DIR):
