@@ -25,7 +25,7 @@ body {
 }
 
 .accordion {
-  width: 250px;
+  width: fit-content;
   overflow: hidden;
 }
 
@@ -47,4 +47,3 @@ body {
   display: inline-block;
   margin-right: 5px;
 }
-

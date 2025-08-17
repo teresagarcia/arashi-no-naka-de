@@ -7,11 +7,15 @@ window.addEventListener("load", (event) => {
             header.classList.toggle('open');
             content.classList.toggle('open');
             if (header.classList.contains('open')) {
-                header.classList.add('font-bold');
-                header.classList.remove('text-blue-link');
-            } else {
+                header.classList.add('font-gray-800');
+                header.classList.remove('text-blue-secondary');
                 header.classList.remove('font-bold');
-                header.classList.add('text-blue-link');
+
+            } else {
+                header.classList.remove('font-gray-800');
+                header.classList.add('text-blue-secondary');
+                header.classList.add('font-bold');
+
             }
         });
     });
