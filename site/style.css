@@ -37,6 +37,7 @@ body {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 .accordion-content.open {
@@ -45,5 +46,11 @@ body {
 
 .accordion-header .arrow {
   display: inline-block;
+  transition: transform 0.5s ease;
   margin-right: 5px;
 }
+
+.accordion-header.open .arrow {
+  transform: rotate(90deg);
+}
+

@@ -6,17 +6,6 @@ window.addEventListener("load", (event) => {
             const content = header.nextElementSibling;
             header.classList.toggle('open');
             content.classList.toggle('open');
-            if (header.classList.contains('open')) {
-                header.classList.add('font-gray-800');
-                header.classList.remove('text-blue-secondary');
-                header.classList.remove('font-bold');
-
-            } else {
-                header.classList.remove('font-gray-800');
-                header.classList.add('text-blue-secondary');
-                header.classList.add('font-bold');
-
-            }
         });
     });
 
