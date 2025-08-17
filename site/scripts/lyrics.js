@@ -2,7 +2,7 @@ window.addEventListener("load", async () => {
   const params = new URLSearchParams(window.location.search);
   const lyricsFile = params.get('song');
 
-  const dataRes = await fetch(`/arashi/${lyricsFile}.json`);
+  const dataRes = await fetch(`/arashi/${lyricsFile}.json?v=2`);
   const data = await dataRes.json();
   const entryTitle = `[Letra] ${data.artist} - ${data.song}`;
   document.querySelector('h2').textContent = entryTitle;
