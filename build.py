@@ -13,11 +13,11 @@ if os.path.exists(DIST_DIR):
 shutil.copytree(SRC_DIR, DIST_DIR)
 
 # extensiones a renombrar
-EXTENSIONS_TO_RENAME = (".js", ".css", ".html", ".json")
+EXTENSIONS_TO_RENAME = (".js", ".css", ".json")
 
 # mapping de nombres originales -> nuevos nombres
 renamed_files = {}
-new_index_name = None
+# new_index_name = None
 
 # 1️⃣ Renombrar archivos
 for root, _, files in os.walk(DIST_DIR):
@@ -30,8 +30,8 @@ for root, _, files in os.walk(DIST_DIR):
             new_path = os.path.join(root, new_file)
             os.rename(old_path, new_path)
             renamed_files[file] = new_file
-            if file.lower() == "index.html":
-                new_index_name = new_file
+            # if file.lower() == "index.html":
+            #     new_index_name = new_file
 
 # 2️⃣ Actualizar referencias exactas en HTML, CSS, JS y JSON
 FILES_TO_UPDATE = (".html", ".css", ".js", ".json")
@@ -67,21 +67,21 @@ with open(lyrics_path, "w", encoding="utf-8") as f:
 
 print(f"✅ Línea {line_index+1} de lyrics.js actualizada con el sufijo")
 
-# 3️⃣ Crear nuevo index.html que redirija al index versionado
-if new_index_name:
-    index_path = os.path.join(DIST_DIR, "index.html")
-    with open(index_path, "w", encoding="utf-8") as f:
-        f.write(f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url={new_index_name}">
-<title>Arashi no naka de</title>
-</head>
-<body>
-Redirigiendo a la versión más reciente...
-</body>
-</html>""")
+# # 3️⃣ Crear nuevo index.html que redirija al index versionado
+# if new_index_name:
+#     index_path = os.path.join(DIST_DIR, "index.html")
+#     with open(index_path, "w", encoding="utf-8") as f:
+#         f.write(f"""<!DOCTYPE html>
+# <html lang="es">
+# <head>
+# <meta charset="UTF-8">
+# <meta http-equiv="refresh" content="0; url={new_index_name}">
+# <title>Arashi no naka de</title>
+# </head>
+# <body>
+# Redirigiendo a la versión más reciente...
+# </body>
+# </html>""")
 
 print("✅ Build completo en", DIST_DIR)
-print(f"✅ Index principal redirige a {new_index_name}")
+# print(f"✅ Index principal redirige a {new_index_name}")
