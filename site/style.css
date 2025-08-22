@@ -8,12 +8,13 @@ body {
   color: black;
   font-family: 'Tahoma', sans-serif;
   background: linear-gradient(
-  45deg,
+  70deg,
   #f3e5f5,
   #ffe0e0, #e8f5e9,
   #e8f5e9, #e3f2fd,
   #e3f2fd, #e3f2fd,
    #e3f2fd, #e3f2fd,
+   #e3f2fd,
   #fffde7, #fffde7
   
 );
