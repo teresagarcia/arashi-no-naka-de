@@ -17,19 +17,19 @@ def limpiar_para_url(texto):
 def final_transformation():   
     with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
-    lyricist = '100+'
-    composer = '100+'
-    arranger = 'Hirofumi Sasaki'
-    album = 'Meikyuu Love Song (2011)'
-    album_folder = "meikyuu_love_song"
-    translations_info = "Letra en japonés: <a href=\"http://www.littleoslo.com/lyj/home/2011/10/%E5%B5%90-together-forever/\" target=\"_blank\">Oo Kashi</a>.<br/>\nRomaji y traducción al inglés: <a href=\"http://www.jpopasia.com/group/arashi/lyrics/meikyu-love-song/together-forever::71798.html\" target=\"_blank\">JpopAsia</a><br/>"
+    lyricist = 'Youth Case'
+    composer = 'Youth Case'
+    arranger = 'BJ Khan'
+    album = 'Bittersweet (2014)'
+    album_folder = "bittersweet"
+    translations_info = "Letra en japonés, romaji y traducción al inglés: <a href=\"http://yarukizero.livejournal.com/165408.html\" target=\"_blank\" class='text-blue-link'>Yarukizero</a>"
     
     credits_section = f"<span class='font-bold text-blue-secondary'>Créditos:</span><br />{translations_info}.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com{json_data['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
 
     new_entry = {
         'artist': json_data['artist'],
         'song': json_data['song'],
-        'intro': 'Tierna canción dentro del single <i>Meikyuu Love Song</i> &#10084;',
+        'intro': 'Otra cara B que saca una sonrisa desde el primer segundo. La verdad es que llevaba años sin escucharla pero la letra seguía bien grabada en mi cabeza.',
         'content': json_data['lyrics'],
         'lyricist': lyricist,
         'composer': composer,
