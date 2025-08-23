@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Gyosho";
-  src: url("./fonts/YOzK04.TTF") format("truetype");
+  src: url("./fonts/subset-YOzFontK04-Regular.woff2") format("truetype");
 }
 
 body {
