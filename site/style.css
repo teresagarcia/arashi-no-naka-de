@@ -1,29 +1,30 @@
-@font-face {
+/* @font-face {
   font-family: "BaileySignature";
   src: url("./fonts/BaileySignature-WpAMG.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "Gyosho";
+  src: url("./fonts/YOzK04.TTF") format("truetype");
 }
 
 body {
-  /* background-color: #eaedee; */
   color: black;
   font-family: 'Tahoma', sans-serif;
-  background: linear-gradient(
-  70deg,
-  #f3e5f5,
-  #ffe0e0, #e8f5e9,
-  #e8f5e9, #e3f2fd,
-  #e3f2fd, #e3f2fd,
-   #e3f2fd, #e3f2fd,
-   #e3f2fd,
-  #fffde7, #fffde7
-  
-);
+  background: linear-gradient(70deg,
+      #f3e5f5,
+      #ffe0e0, #e8f5e9,
+      #e8f5e9, #e3f2fd,
+      #e3f2fd, #e3f2fd,
+      #e3f2fd, #e3f2fd,
+      #e3f2fd,
+      #fffde7, #fffde7);
 }
 
-.title {
-  font-family: 'BaileySignature', sans-serif;
-  color: rgb(52, 83, 130);
-}
+/* .title { */
+  /* font-family: 'BaileySignature', sans-serif; */
+  /* color: rgb(52, 83, 130); */
+/* } */
 
 .post-card {
   height: 300px;
@@ -63,5 +64,25 @@ body {
 
 .accordion-header.open .arrow {
   transform: rotate(90deg);
+}
+
+.banner a{
+  font-family: 'Gyosho', sans-serif;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin: 0;
+  background: linear-gradient(90deg,
+      #0d6efd 0%,
+      #ffd43b 22%,
+      #ff6b6b 44%,
+      #845ef7 66%,
+      #20c997 88%,
+      #0d6efd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, .06);
+  text-shadow: 0 6px 18px var(--shadow);
+  background-size: 200% 100%;
 }
 
