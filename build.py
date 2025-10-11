@@ -23,20 +23,21 @@ new_list_page_name = None
 # 1️⃣ Renombrar archivos
 for root, _, files in os.walk(DIST_DIR):
     for file in files:
-        ext = os.path.splitext(file)[1].lower()
-        if ext in EXTENSIONS_TO_RENAME:
-            old_path = os.path.join(root, file)
-            name, ext = os.path.splitext(file)
-            new_file = f"{name}-{VERSION}{ext}"
-            new_path = os.path.join(root, new_file)
-            os.rename(old_path, new_path)
-            renamed_files[file] = new_file
-            if file.lower() == "index.html":
-                new_index_name = new_file
-            elif file.lower() == "lyrics.html":
-                new_lyrics_page_name = new_file
-            elif file.lower() == "list.html":
-                new_list_page_name = new_file
+        if file.lower() != 'not_found.html': 
+            ext = os.path.splitext(file)[1].lower()
+            if ext in EXTENSIONS_TO_RENAME:
+                old_path = os.path.join(root, file)
+                name, ext = os.path.splitext(file)
+                new_file = f"{name}-{VERSION}{ext}"
+                new_path = os.path.join(root, new_file)
+                os.rename(old_path, new_path)
+                renamed_files[file] = new_file
+                if file.lower() == "index.html":
+                    new_index_name = new_file
+                elif file.lower() == "lyrics.html":
+                    new_lyrics_page_name = new_file
+                elif file.lower() == "list.html":
+                    new_list_page_name = new_file
                 
 # 2️⃣ Actualizar referencias exactas en HTML, CSS, JS y JSON
 FILES_TO_UPDATE = (".html", ".css", ".js", ".json")

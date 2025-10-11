@@ -9,7 +9,7 @@ class ShareButtonComponent extends HTMLElement {
         button.addEventListener('click', () => {
             let path = window.location.pathname;
 
-            path = path.replace(/-\d{12}\.html$/, '.html');
+            path = path.replace(/-\d{12}/, '');
 
             const cleanUrl = window.location.origin + path + window.location.search + window.location.hash;
             const btnSpan = button.querySelector('span');
