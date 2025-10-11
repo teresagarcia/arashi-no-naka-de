@@ -18,7 +18,8 @@ EXTENSIONS_TO_RENAME = (".js", ".html",".css", ".json")
 # mapping de nombres originales -> nuevos nombres
 renamed_files = {}
 new_index_name = None
-
+new_lyrics_page_name = None
+new_list_page_name = None
 # 1️⃣ Renombrar archivos
 for root, _, files in os.walk(DIST_DIR):
     for file in files:
@@ -32,7 +33,11 @@ for root, _, files in os.walk(DIST_DIR):
             renamed_files[file] = new_file
             if file.lower() == "index.html":
                 new_index_name = new_file
-
+            elif file.lower() == "lyrics.html":
+                new_lyrics_page_name = new_file
+            elif file.lower() == "list.html":
+                new_list_page_name = new_file
+                
 # 2️⃣ Actualizar referencias exactas en HTML, CSS, JS y JSON
 FILES_TO_UPDATE = (".html", ".css", ".js", ".json")
 
@@ -83,5 +88,45 @@ Redirigiendo a la versión más reciente...
 </body>
 </html>""")
 
+if new_list_page_name:
+    index_path = os.path.join(DIST_DIR, "list.html")
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url={new_list_page_name}">
+<title>Arashi no naka de</title>
+</head>
+<body>
+Redirigiendo a la versión más reciente...
+</body>
+</html>""")
+        
+        
+if new_lyrics_page_name:
+    index_path = os.path.join(DIST_DIR, "lyrics.html")
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Arashi no naka de</title>
+<script>
+(function() {{
+  const currentHash = '{VERSION}';
+  if (location.pathname.includes('-' + currentHash + '.html')) return;
+  const newUrl = location.pathname.replace('lyrics.html', 'lyrics-' + currentHash + '.html') + location.search;
+  window.location.replace(newUrl);
+}})();
+</script>
+</head>
+<body>
+Redirigiendo a la versión más reciente...
+</body>
+</html>""")
+        
 print("✅ Build completo en", DIST_DIR)
 print(f"✅ Index principal redirige a {new_index_name}")
+print(f"✅ Lista redirige a {new_list_page_name}")
+print(f"✅ Lyrics redirige a {new_lyrics_page_name}")
