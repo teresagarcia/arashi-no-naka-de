@@ -17,19 +17,19 @@ def limpiar_para_url(texto):
 def final_transformation():   
     with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
-    lyricist = 'Youth Case'
-    composer = 'Youth Case'
-    arranger = 'BJ Khan'
-    album = 'Bittersweet (2014)'
-    album_folder = "bittersweet"
-    translations_info = "Letra en japonés, romaji y traducción al inglés: <a href=\"http://yarukizero.livejournal.com/165408.html\" target=\"_blank\" class='text-blue-link'>Yarukizero</a>"
+    lyricist = 'HIKARI'
+    composer = '7th Avenue, HIKARI'
+    arranger = 'Metropolitan Digital Clique'
+    album = 'Find the Answer (2018), 5x20 All the best!! 1999-2019 (2019)'
+    album_folder = "5x20"
+    translations_info = "Letra en japonés: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics (versión corta)</a>, <a href=\"http://blog.naver.com/PostView.nhn?blogId=jample&amp;logNo=221213578011\" target=\"_blank\" class='text-blue-link'>Jample</a>.<br/>\nRomaji: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics</a>, Yasashii Uta.<br/>\nTraducción al inglés: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics</a>.<br/>\nTraducción al coreano: <a href=\"http://blog.naver.com/PostView.nhn?blogId=jample&amp;logNo=221213578011\" target=\"_blank\" class='text-blue-link'>Jample</a>"
     
     credits_section = f"<span class='font-bold text-blue-secondary'>Créditos:</span><br />{translations_info}.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com{json_data['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
 
     new_entry = {
         'artist': json_data['artist'],
         'song': json_data['song'],
-        'intro': 'Otra cara B que saca una sonrisa desde el primer segundo. La verdad es que llevaba años sin escucharla pero la letra seguía bien grabada en mi cabeza.',
+        'intro': 'Otro de esos singles de 2017-2018 que en su momento prácticamente ignoré (salvo el día en que me rompí la cabeza para poder traducirlo) y ahora me hacen echarlos aún más en falta.',
         'content': json_data['lyrics'],
         'lyricist': lyricist,
         'composer': composer,
