@@ -17,19 +17,19 @@ def limpiar_para_url(texto):
 def final_transformation():   
     with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
-    lyricist = 'HIKARI'
-    composer = '7th Avenue, HIKARI'
-    arranger = 'Metropolitan Digital Clique'
-    album = 'Find the Answer (2018), 5x20 All the best!! 1999-2019 (2019)'
-    album_folder = "5x20"
-    translations_info = "Letra en japonés: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics (versión corta)</a>, <a href=\"http://blog.naver.com/PostView.nhn?blogId=jample&amp;logNo=221213578011\" target=\"_blank\" class='text-blue-link'>Jample</a>.<br/>\nRomaji: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics</a>, Yasashii Uta.<br/>\nTraducción al inglés: <a href=\"https://arashilyrics.livejournal.com/120751.html\" target=\"_blank\" class='text-blue-link'>ArashiLyrics</a>.<br/>\nTraducción al coreano: <a href=\"http://blog.naver.com/PostView.nhn?blogId=jample&amp;logNo=221213578011\" target=\"_blank\" class='text-blue-link'>Jample</a>"
+    lyricist = 'Octobar'
+    composer = 'Octobar, Fox'
+    arranger = 'Taku Yoshioka'
+    album = 'Wild at Heart (2012)'
+    album_folder = "wild_at_heart"
+    translations_info = "Letra en japonés: Oo Kashi.<br/>\nRomaji y traducción al inglés: JpopAsia"
     
     credits_section = f"<span class='font-bold text-blue-secondary'>Créditos:</span><br />{translations_info}.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com{json_data['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
 
     new_entry = {
         'artist': json_data['artist'],
         'song': json_data['song'],
-        'intro': 'Otro de esos singles de 2017-2018 que en su momento prácticamente ignoré (salvo el día en que me rompí la cabeza para poder traducirlo) y ahora me hacen echarlos aún más en falta.',
+        'intro': 'Top 1 de canciones relajantes de Arashi.',
         'content': json_data['lyrics'],
         'lyricist': lyricist,
         'composer': composer,
