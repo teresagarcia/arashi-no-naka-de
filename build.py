@@ -117,8 +117,10 @@ if new_lyrics_page_name:
 (function() {{
   const currentHash = '{VERSION}';
   if (location.pathname.includes('-' + currentHash + '.html')) return;
-  const newUrl = location.pathname.replace('lyrics.html', 'lyrics-' + currentHash + '.html') + location.search;
-  window.location.replace(newUrl);
+  if (location.search && location.search !== '') {{
+    const newUrl = location.pathname.replace('lyrics.html', 'lyrics-' + currentHash + '.html') + location.search;
+    window.location.replace(newUrl);
+  }}
 }})();
 </script>
 </head>
