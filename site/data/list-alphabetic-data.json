@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "B",
+    "songs": [
+      {
+        "title": "Bokura ga tsunaideiku",
+        "link": "japonism/bokura_ga_tsunaideiku"
+      }
+    ]
+  },
+  {
+    "letter": "F",
+    "songs": [
+      {
+        "title": "Find the Answer",
+        "link": "5x20/find_the_answer"
+      }
+    ]
+  },
+  {
+    "letter": "H",
+    "songs": [
+      {
+        "title": "How Can I Love",
+        "link": "wild_at_heart/how_can_i_love"
+      }
+    ]
+  },
+  {
+    "letter": "M",
+    "songs": [
+      {
+        "title": "Mukae ni iku yo",
+        "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
+      }
+    ]
+  },
+  {
+    "letter": "T",
+    "songs": [
+      {
+        "title": "together, forever",
+        "link": "meikyuu_love_song/together_forever"
+      },
+      {
+        "title": "truth",
+        "link": "5x10/truth"
+      },
+      {
+        "title": "Tsunagu",
+        "link": "untitled/tsunaguo"
+      }
+    ]
+  }
+]
