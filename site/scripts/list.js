@@ -1,4 +1,4 @@
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
     document.querySelector('#order-album-btn').addEventListener('click', orderByAlbum);
     document.querySelector('#order-alpha-btn').addEventListener('click', orderByAlpha);
     document.querySelectorAll('.accordion-header').forEach(header => {
