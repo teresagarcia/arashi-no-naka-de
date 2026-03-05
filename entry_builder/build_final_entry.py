@@ -17,19 +17,19 @@ def limpiar_para_url(texto):
 def final_transformation():   
     with open("data/preformat_entry.json") as json_file:
         json_data = json.load(json_file)
-    lyricist = 'Octobar'
-    composer = 'Octobar, Fox'
-    arranger = 'Taku Yoshioka'
-    album = 'Wild at Heart (2012)'
-    album_folder = "wild_at_heart"
-    translations_info = "Letra en japonés: Oo Kashi.<br/>\nRomaji y traducción al inglés: JpopAsia"
+    lyricist = 'HIKARI'
+    composer = 'Tomoki Ishizuka'
+    arranger = 'Tomoki Ishizuka'
+    album = 'Five (2026)'
+    album_folder = "five"
+    translations_info = "Letra en japonés y romaji: <a href=\"https://www.azlyrics.com/lyrics/arashi/five.html\" target=\"_blank\">AZLyrics</a>"
     
     credits_section = f"<span class='font-bold text-blue-secondary'>Créditos:</span><br />{translations_info}.<br/>Traducción al español publicada originalmente en <a href='https://yasashiiuta05.blogspot.com{json_data['blogger_link']}' target='_blank' class='text-blue-link'>Yasashii Uta</a>, mantenida y actualizada en <a href='https://arashinonakade.neocities.org/about.html' class='text-blue-link'>Arashi no naka de</a>."
 
     new_entry = {
         'artist': json_data['artist'],
         'song': json_data['song'],
-        'intro': 'Top 1 de canciones relajantes de Arashi.',
+        'intro': 'Sólo puede haber gratitud hacia el trabajo de estos hombres, sin duda no les olvidaremos.',
         'content': json_data['lyrics'],
         'lyricist': lyricist,
         'composer': composer,
