@@ -40,6 +40,15 @@
     ]
   },
   {
+    "titleText": "S",
+    "songs": [
+      {
+        "title": "Story",
+        "link": "hatenai_sora/story"
+      }
+    ]
+  },
+  {
     "titleText": "T",
     "songs": [
       {

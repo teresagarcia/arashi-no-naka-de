@@ -1,5 +1,13 @@
 [
-  { "titleText": "Five", "songs": [{"title": "Five", "link": "five/five"}] },
+  {
+    "titleText": "Five",
+    "songs": [
+      {
+        "title": "Five",
+        "link": "five/five"
+      }
+    ]
+  },
   {
     "titleText": "5x20 All the BEST!! 1999-2019",
     "songs": [
@@ -17,65 +25,112 @@
       }
     ]
   },
-  { "titleText": "Find the Answer", "songs": [{"title": "Find the Answer", "link": "5x20/find_the_answer"}] },
-  { "titleText": "untitled", "songs": [{"title": "tsunagu", "link": "untitled/tsunagu"}] },
   {
-    "titleText": "Tsunagu", "songs": [{"title": "Tsunagu", "link": "untitled/tsunagu"}]
+    "titleText": "Find the Answer",
+    "songs": [
+      {
+        "title": "Find the Answer",
+        "link": "5x20/find_the_answer"
+      }
+    ]
   },
   {
-    "titleText": "Are you happy?", 
-    "songs": [{
+    "titleText": "untitled",
+    "songs": [
+      {
+        "title": "tsunagu",
+        "link": "untitled/tsunagu"
+      }
+    ]
+  },
+  {
+    "titleText": "Tsunagu",
+    "songs": [
+      {
+        "title": "Tsunagu",
+        "link": "untitled/tsunagu"
+      }
+    ]
+  },
+  {
+    "titleText": "Are you happy?",
+    "songs": [
+      {
         "title": "To my Homies",
         "link": "are_you_happy/to_my_homies"
-    }]
+      }
+    ]
   },
   {
-    "titleText": "Japonism", 
-    "songs": [{
+    "titleText": "Japonism",
+    "songs": [
+      {
         "title": "Bokura ga tsunaideiku",
         "link": "japonism/bokura_ga_tsunaideiku"
-    }]
+      }
+    ]
   },
   {
     "titleText": "Bittersweet",
-    "songs": [{
+    "songs": [
+      {
         "title": "Motto, ima yori",
         "link": "bittersweet/motto_ima_yori"
-    }]
+      }
+    ]
   },
   {
-    "titleText": "Wild at heart", 
-    "songs": [{
+    "titleText": "Wild at heart",
+    "songs": [
+      {
         "title": "How Can I love",
         "link": "wild_at_heart/how_can_i_love"
-    }]
+      }
+    ]
   },
   {
-    "titleText": "Meikyuu Love Song", 
-    "songs": [{
+    "titleText": "Meikyuu Love Song",
+    "songs": [
+      {
         "title": "together, forever",
         "link": "meikyuu_love_song/together_forever"
-    }]
+      }
+    ]
   },
   {
-    "titleText": "Boku no miteiru fuukei", 
-    "songs": [{
-        "title": "Mukae ni iku yo",
-        "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
-    }]
+    "titleText": "Hatenai Sora",
+    "songs": [
+      {
+        "title": "Story",
+        "link": "hatenai_sora/story"
+      }
+    ]
   },
   {
-    "titleText": "5x10 All the BEST! 1999-2009", 
-    "songs": [{
+    "titleText": "Boku no miteiru fuukei",
+    "songs": [
+      {
         "title": "Mukae ni iku yo",
         "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
-    }]
+      }
+    ]
+  },
+  {
+    "titleText": "5x10 All the BEST! 1999-2009",
+    "songs": [
+      {
+        "title": "Mukae ni iku yo",
+        "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
+      }
+    ]
   },
   {
     "titleText": "truth/Kaze no mukou e",
-    "songs": [{
+    "songs": [
+      {
         "title": "truth",
         "link": "5x10/truth"
-    }]
+      }
+    ]
   }
 ]
