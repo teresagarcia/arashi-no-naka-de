@@ -1,6 +1,7 @@
 [
+  { "titleText": "Five", "songs": [{"title": "Five", "link": "five/five"}] },
   {
-    "album": "5x20 All the BEST!! 1999-2019",
+    "titleText": "5x20 All the BEST!! 1999-2019",
     "songs": [
       {
         "title": "truth",
@@ -16,55 +17,55 @@
       }
     ]
   },
-  { "album": "Find the Answer", "songs": [{"title": "Find the Answer", "link": "5x20/find_the_answer"}] },
-  { "album": "untitled", "songs": [{"title": "tsunagu", "link": "untitled/tsunagu"}] },
+  { "titleText": "Find the Answer", "songs": [{"title": "Find the Answer", "link": "5x20/find_the_answer"}] },
+  { "titleText": "untitled", "songs": [{"title": "tsunagu", "link": "untitled/tsunagu"}] },
   {
-    "album": "Tsunagu", "songs": [{"title": "Tsunagu", "link": "untitled/tsunagu"}]
+    "titleText": "Tsunagu", "songs": [{"title": "Tsunagu", "link": "untitled/tsunagu"}]
   },
   {
-    "album": "Japonism", 
+    "titleText": "Japonism", 
     "songs": [{
         "title": "Bokura ga tsunaideiku",
         "link": "japonism/bokura_ga_tsunaideiku"
     }]
   },
   {
-    "album": "Bittersweet",
+    "titleText": "Bittersweet",
     "songs": [{
         "title": "Motto, ima yori",
         "link": "bittersweet/motto_ima_yori"
     }]
   },
   {
-    "album": "Wild at heart", 
+    "titleText": "Wild at heart", 
     "songs": [{
         "title": "How Can I love",
         "link": "wild_at_heart/how_can_i_love"
     }]
   },
   {
-    "album": "Meikyuu Love Song", 
+    "titleText": "Meikyuu Love Song", 
     "songs": [{
         "title": "together, forever",
         "link": "meikyuu_love_song/together_forever"
     }]
   },
   {
-    "album": "Boku no miteiru fuukei", 
+    "titleText": "Boku no miteiru fuukei", 
     "songs": [{
         "title": "Mukae ni iku yo",
         "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
     }]
   },
   {
-    "album": "5x10 All the BEST! 1999-2009", 
+    "titleText": "5x10 All the BEST! 1999-2009", 
     "songs": [{
         "title": "Mukae ni iku yo",
         "link": "boku_no_miteiru_fuukei/mukae_ni_iku_yo"
     }]
   },
   {
-    "album": "truth/Kaze no mukou e",
+    "titleText": "truth/Kaze no mukou e",
     "songs": [{
         "title": "truth",
         "link": "5x10/truth"

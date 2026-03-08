@@ -1,13 +1,21 @@
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
+    const dataResByAlbum = await fetch(`/data/list-data.json`);
+    const dataByAlbum = await dataResByAlbum.json();
+
+    const el = document.createElement('list-component');
+    el.data = dataByAlbum;
+
+    document.querySelector('#by-album-list').appendChild(el);
+    const dataResAlphabet = await fetch(`/data/list-alphabetic-data.json`);
+    const dataAlphabet = await dataResAlphabet.json();
+
+    const elAlphabet = document.createElement('list-component');
+    elAlphabet.data = dataAlphabet;
+
+    document.querySelector('#alphabetical-list').appendChild(elAlphabet);
     document.querySelector('#order-album-btn').addEventListener('click', orderByAlbum);
     document.querySelector('#order-alpha-btn').addEventListener('click', orderByAlpha);
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-            header.classList.toggle('open');
-            content.classList.toggle('open');
-        });
-    });
+
 
 });
 
